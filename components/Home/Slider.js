@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import Link from "next/link";
 import styled from "styled-components";
 import Image from "next/image";
 
@@ -68,6 +69,13 @@ const StyledSlider = styled.div`
 const Slider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000);
+    return () => clearInterval(interval);
+  });
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);

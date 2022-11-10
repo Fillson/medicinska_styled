@@ -3,7 +3,9 @@ import styled from "styled-components";
 import Link from "next/link";
 import Router from "next/router";
 import Image from "next/image";
+import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import LogoImage from "../public/mfo_logo.png";
+import Dropdown from "./ui/Dropdown";
 
 const StyledHeader = styled.header`
   width: 100%;
@@ -31,7 +33,12 @@ const StyledHeader = styled.header`
   }
 
   nav a {
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
+  }
+
+  nav div {
+    padding: 1rem 1rem;
+    cursor: pointer;
   }
 
   .menuToggle {
@@ -71,7 +78,8 @@ const StyledHeader = styled.header`
       padding-top: 10rem;
       transform: translateX(100%);
       transition: 0.2s ease-in-out;
-      background: #2b8a3e;
+      background: white;
+      opacity: 0.9;
       z-index: 10;
     }
 
@@ -93,12 +101,34 @@ const StyledHeader = styled.header`
   }
 `;
 
+const utskottLinks = [
+  { text: "Corpus Callosum", href: "/corpus-callosum" },
+  { text: "Kirurgiska Utskottet", href: "/kirurgiska-utskottet" },
+  { text: "Studiesociala Utskottet", href: "/studiesociala-utskottet" },
+  { text: "Forskningsutskottet", href: "/forskningsutskottet" },
+  { text: "Idrottsutskottet", href: "/idrottsutskottet" },
+];
+
+const omLinks = [
+  { text: "Styrelsen", href: "/styrelsen" },
+  { text: "Samarbetspartners", href: "/" },
+];
+
+const medlemLinks = [
+  { text: "Bli Medlem", href: "/" },
+  { text: "Redan Medlem?", href: "/" },
+];
+
+const kontaktLinks = [
+  { text: "Kontakta Oss", href: "/kontakt" },
+  { text: "FAQ", href: "/faq" },
+];
+
 const Header = () => {
   const nav = useRef();
   const middleLine = useRef();
   const rotateMinus = useRef();
   const rotatePlus = useRef();
-
   const toggleMenu = () => {
     nav?.current?.classList?.toggle("menuOpen");
     middleLine?.current?.classList?.toggle("hidden");
@@ -117,10 +147,10 @@ const Header = () => {
         </Link>
 
         <nav ref={nav}>
-          <Link href='/om-mfo'>Om MFÖ</Link>
-          <Link href='/utskott'>Utskott</Link>
-          <Link href='/medlem'>Medlem</Link>
-          <Link href='/kontakt'>Kontakt</Link>
+          <Dropdown title='Om MFÖ' links={omLinks} />
+          <Dropdown title='Utskott' links={utskottLinks} />
+          <Dropdown title='Medlem' links={medlemLinks} />
+          <Dropdown title='Kontakt' links={kontaktLinks} />
         </nav>
 
         <div onClick={toggleMenu} className='menuToggle'>

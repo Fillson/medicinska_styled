@@ -27,6 +27,12 @@ const StyledFooter = styled.footer`
     display: flex;
     gap: 0.5rem;
   }
+
+  @media (max-width: 700px) {
+    .content {
+      grid-template-columns: 1fr;
+    }
+  }
 `;
 const Footer = () => {
   return (

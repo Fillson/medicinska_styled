@@ -4,16 +4,29 @@ import styled from "styled-components";
 import Event from "./Event";
 
 const StyledEvents = styled.section`
-  background: white;
-  padding: 4rem 2rem;
+  padding: 1rem;
+
   h1 {
     text-align: center;
+  }
+
+  .wrapper {
+    background-color: white;
+    padding-top: 1rem;
   }
 
   .eventsContainer {
     display: flex;
     flex-direction: column;
     width: 100%;
+  }
+
+  @media (max-width: 700px) {
+    background-color: white;
+
+    .wrapper {
+      padding-top: 0;
+    }
   }
 `;
 

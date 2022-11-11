@@ -30,7 +30,7 @@ const StyledCard = styled.div`
   h3 {
     font-weight: bold;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     padding: 4px;
   }
   h4 {

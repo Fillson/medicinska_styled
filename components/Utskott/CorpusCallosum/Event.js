@@ -14,13 +14,18 @@ const StyledEvent = styled.div`
   h2 {
     text-align: center;
   }
+
+  @media (max-width: 700px) {
+    padding: 2rem;
+    flex-direction: column;
+  }
 `;
 
 const Event = ({ title, text, image }) => {
   return (
     <StyledEvent>
       <div>
-        <h2>{title}</h2>
+        <h3>{title}</h3>
         <p>{text}</p>
       </div>
       <div>

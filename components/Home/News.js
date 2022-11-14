@@ -17,6 +17,12 @@ const StyledNews = styled.section`
   p {
     padding: 1rem 0;
   }
+
+  .date {
+    padding: 0;
+    font-size: 0.9rem;
+  }
+
   a {
     text-align: center;
     width: 8rem;
@@ -50,20 +56,20 @@ const news = [
   },
   {
     id: 2,
-    title: "test3",
-    text: "test3",
+    title: "Julsittning",
+    text: "Cupidatat id dolore non exercitation enim qui.",
     date: new Date().toDateString(),
   },
   {
     id: 3,
-    title: "test3",
-    text: "test3",
+    title: "SUPEN",
+    text: "Elit incididunt pariatur sunt est incididunt non amet nisi quis velit veniam dolor.",
     date: new Date().toDateString(),
   },
   {
     id: 4,
     title: "test3",
-    text: "test3",
+    text: "Cillum nisi culpa ea aliquip.",
     date: new Date().toDateString(),
   },
 ];
@@ -122,7 +128,7 @@ const News = () => {
             return (
               <div key={index} className='content'>
                 <h3>{newsEl.title}</h3>
-                <p>{newsEl.date}</p>
+                <p className='date'>{newsEl.date}</p>
                 <p>{newsEl.text}</p>
                 <Link href={`/news/${newsEl.id}`}>Läs mer</Link>
               </div>

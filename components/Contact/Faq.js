@@ -26,7 +26,7 @@ const Faq = () => {
     <StyledFaq>
       <div className='wrapper'>
         <div className='content'>
-          <h1>För nya studenter vid läkarprogrammet Örebro</h1>
+          <h1>För nya studenter vid läkarprogrammet</h1>
           <div>
             <h3>Vart är läkarstudenternas campus?</h3>
             <p>

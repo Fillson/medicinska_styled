@@ -64,6 +64,10 @@ const StyledSlider = styled.div`
     user-select: none;
     z-index: 2;
   }
+
+  @media (max-width: 700px) {
+    height: 340px;
+  }
 `;
 
 const Slider = ({ slides }) => {
@@ -98,9 +102,11 @@ const Slider = ({ slides }) => {
               <FaAngleLeft onClick={prevSlide} className='iconLeft' size={50} />
               <h1>{slide.text}</h1>
               {index === current && (
-                <div className='nextImage'>
-                  <Image fill src={slide.image} alt='/' />
-                </div>
+                <Link href={slide.href}>
+                  <div className='nextImage'>
+                    <Image fill src={slide.image} alt='/' />
+                  </div>
+                </Link>
               )}
               <FaAngleRight
                 onClick={nextSlide}

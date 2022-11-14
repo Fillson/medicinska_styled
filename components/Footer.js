@@ -42,9 +42,9 @@ const Footer = () => {
           <div>
             <p>Medicinska Föreningen Örebro</p>
             <nav>
+              <Link href='/'>Om MFÖ</Link>
               <Link href='/'>Utskott</Link>
               <Link href='/kontakt'>Kontakt</Link>
-              <Link href='/'>Om MFÖ</Link>
               <Link href='/'>Evenemang</Link>
             </nav>
 

@@ -12,6 +12,7 @@ const StyledNews = styled.section`
     background: white;
     height: 300px;
     border-radius: var(--slightlyRounded);
+    box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
   }
 
   p {
@@ -27,16 +28,19 @@ const StyledNews = styled.section`
     text-align: center;
     width: 8rem;
     padding: 0.5rem 0.5rem;
-    border: 1px solid #2b8a3e;
+    background: #30a730;
+    color: white;
     margin-bottom: 1rem;
     border-radius: var(--slightlyRounded);
   }
   .slick-slide {
     padding: 5px;
   }
-
+  .slick-prev:before,
+  .slick-next:before {
+    color: black;
+  }
   h2 {
-    color: white;
     text-align: center;
   }
 `;

@@ -16,6 +16,10 @@ const StyledCardsContainer = styled.section`
     gap: 2rem;
   }
 
+  .nextImage {
+    padding: 0 1rem;
+  }
+
   @media (max-width: 700px) {
     .container {
       grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -28,21 +32,25 @@ const cardsInfo = [
     title: "Styrelsen",
     text: "Bli medlem i medicinska föreningen - För ett bättre studentliv",
     href: "/",
+    image: "/team-svg.svg",
   },
   {
     title: "Bli Medlem",
     text: "Bli medlem i medicinska föreningen - För ett bättre studentliv",
     href: "/",
+    image: "/join-svg.svg",
   },
   {
     title: "Engagera dig",
     text: "Bli medlem i medicinska föreningen - För ett bättre studentliv",
     href: "/",
+    image: "/leader-svg.svg",
   },
   {
     title: "Evenemang",
     text: "Medicinska förening styr upp flera roliga evenmang för dig som student",
     href: "/",
+    image: "/party-svg.svg",
   },
 ];
 
@@ -57,6 +65,7 @@ const CardsContainer = () => {
               title={card.title}
               text={card.text}
               href={card.href}
+              image={card.image}
             />
           );
         })}

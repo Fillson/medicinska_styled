@@ -4,7 +4,7 @@ import Hero from "../../ui/Hero";
 const StyledAbout = styled.section`
   width: 100%;
   padding: 0;
-  color: white;
+  color: black;
 
   .content {
     display: flex;

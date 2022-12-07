@@ -19,7 +19,7 @@ const FormStyles = styled.div`
     padding: 0.5rem 1rem;
     border: 0;
     border-bottom: 1px solid #b0b0b0;
-    color: white;
+    color: black;
     background: transparent;
   }
   button {
@@ -27,7 +27,8 @@ const FormStyles = styled.div`
     padding: 0.8rem;
     border: 0;
     border-radius: var(--rounding-slight);
-    background-color: white;
+    background-color: #2b8a3e;
+    color: white;
     cursor: pointer;
   }
   button:hover {

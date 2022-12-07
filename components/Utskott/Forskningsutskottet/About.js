@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Hero from "../../ui/Hero";
 
 const StyledAbout = styled.section`
-  color: white;
+  color: black;
   padding: 0;
 
   .content {

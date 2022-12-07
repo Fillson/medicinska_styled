@@ -4,7 +4,7 @@ import styled from "styled-components";
 const StyledFaq = styled.section`
   width: 100%;
   padding: 0;
-  color: white;
+  color: black;
 
   .content {
     display: flex;

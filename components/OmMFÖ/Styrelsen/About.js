@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledAbout = styled.section`
-  color: white;
+  color: black;
   padding: 4rem 2rem;
   .intro {
     display: flex;

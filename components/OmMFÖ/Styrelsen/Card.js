@@ -10,8 +10,8 @@ const StyledCard = styled.div`
   flex-direction: column;
   padding: 1rem;
   border-radius: 0.5rem;
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: #30a730;
   align-items: left;
 
   img {
@@ -26,12 +26,15 @@ const StyledCard = styled.div`
 
   a {
     text-decoration: underline;
+    color: white;
   }
+
   h3 {
     font-weight: bold;
     text-align: center;
     font-size: 1.3rem;
     padding: 4px;
+    color: white;
   }
   h4 {
     margin: 0;
@@ -40,6 +43,7 @@ const StyledCard = styled.div`
   p {
     text-align: left;
     padding: 4px;
+    color: white;
   }
 `;
 

@@ -6,7 +6,7 @@ import Mail from "./mail";
 
 const StyledContact = styled.section`
   padding: 0;
-  color: white;
+  color: black;
 
   .contact {
     display: grid;
@@ -23,7 +23,7 @@ const StyledContact = styled.section`
   }
 
   a {
-    color: white;
+    color: black;
     text-decoration: underline;
   }
 

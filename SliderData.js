@@ -1,27 +1,17 @@
 export const SliderData = [
   {
-    image: "/slider/Corpus_Main.jpg",
-    text: "Text 1",
+    image: "/slider/slider1.jpg",
+    text: "Välkommen Till Medicinska Föreningen Örebro",
     href: "/",
   },
   {
-    image: "/slider/Idrottsutskottet_Main.jpeg",
-    text: "Text 2",
+    image: "/slider/slider2.jpg",
+    text: "Välkommen Till Medicinska Föreningen Örebro",
     href: "/",
   },
   {
-    image: "/slider/Forskning_Main.jpg",
-    text: "Text 3",
-    href: "/",
-  },
-  {
-    image: "/slider/Studiesoc_Main.jpg",
-    text: "Text 4",
-    href: "/",
-  },
-  {
-    image: "/slider/Kirurgiska_Main.jpg",
-    text: "Text 5",
+    image: "/slider/slider3.jpg",
+    text: "Välkommen Till Medicinska Föreningen Örebro",
     href: "/",
   },
 ];

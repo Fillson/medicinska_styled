@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Image from "next/image";
 
 const StyledCard = styled.div`
+  /* box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%); */
   width: 100%;
   height: auto;
   display: flex;
@@ -13,23 +14,25 @@ const StyledCard = styled.div`
   color: black;
   background-color: white;
   align-items: center;
+  gap: 1rem;
 
   img {
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
   }
 
-  :hover {
+  /* :hover {
     transform: scale(1.05);
     transition-duration: 300ms;
-  }
+  } */
 
   a {
     text-align: center;
     width: 8rem;
-    padding: 1rem 2rem;
-    border: 1px solid #2b8a3e;
-    margin-bottom: 1rem;
+    padding: 0.8rem 2rem;
+    /* border: 1px solid #2b8a3e; */
+    background-color: #30a730;
+    color: white;
     border-radius: var(--slightlyRounded);
   }
 
@@ -43,29 +46,47 @@ const StyledCard = styled.div`
     text-align: center;
     padding-top: 8px;
     padding: 4px;
+    color: #30a730;
+    font-size: 1.5rem;
   }
 
   p {
     text-align: center;
     padding: 4px;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  .textDiv {
+    width: 220px;
+    margin-bottom: 10px;
+  }
+
+  .nextImage {
+    height: 100%;
+    width: 70%;
   }
 `;
 
-const Card = ({ title, text, href }) => {
+const Card = ({ title, text, href, image }) => {
   return (
     <StyledCard>
       <Image
         className='nextImage'
-        src='https://images.unsplash.com/photo-1490598000245-075175152d25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
+        src={image}
         alt='/'
         width={250}
         height={250}
       />
       <h3>{title}</h3>
-      <p>{text}</p>
+      <div className='textDiv'>
+        <p>{text}</p>
+      </div>
       <a href={href}>Läs mer</a>
     </StyledCard>
   );
 };
 
 export default Card;
+

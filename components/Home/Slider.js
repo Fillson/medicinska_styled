@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-import Link from "next/link";
 import styled from "styled-components";
 import Image from "next/image";
 
 const StyledSlider = styled.div`
   max-width: 100%;
-  height: 550px;
+  height: 600px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   position: relative;
+  margin-bottom: 7rem;
 
   .overlay {
     position: absolute;
@@ -19,7 +19,7 @@ const StyledSlider = styled.div`
     width: 100%;
     height: 100%;
     z-index: 2;
-    background-color: rgb(0 0 0 / 0.3);
+    background-color: rgb(0 0 0 / 0.53);
   }
 
   .slider {
@@ -31,10 +31,20 @@ const StyledSlider = styled.div`
     align-items: center;
   }
 
-  .slider h1 {
+  .content {
     position: absolute;
-    color: white;
     z-index: 3;
+  }
+
+  .content h2 {
+    color: white;
+    font-size: 3rem;
+  }
+
+  .content p {
+    color: white;
+    text-align: center;
+    font-size: 2.3rem;
   }
 
   .show {
@@ -53,6 +63,10 @@ const StyledSlider = styled.div`
     cursor: pointer;
     user-select: none;
     z-index: 2;
+  }
+
+  .imageSlide {
+    object-fit: cover;
   }
 
   .iconRight {
@@ -74,12 +88,12 @@ const Slider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 5000);
-    return () => clearInterval(interval);
-  });
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     nextSlide();
+  //   }, 5000);
+  //   return () => clearInterval(interval);
+  // });
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -96,17 +110,24 @@ const Slider = ({ slides }) => {
     <StyledSlider>
       <div className='overlay' />
       <div className='slider'>
+        <div className='content'>
+          <h2>Välkommen Till Medicinska Föreningen</h2>
+          <p>För ett bättre studentliv</p>
+        </div>
+
         {slides.map((slide, index) => {
           return (
             <div key={index} className={index === current ? "show" : "hide"}>
               <FaAngleLeft onClick={prevSlide} className='iconLeft' size={50} />
-              <h1>{slide.text}</h1>
               {index === current && (
-                <Link href={slide.href}>
-                  <div className='nextImage'>
-                    <Image fill src={slide.image} alt='/' />
-                  </div>
-                </Link>
+                <div className='nextImage'>
+                  <Image
+                    fill
+                    className='imageSlide'
+                    src={slide.image}
+                    alt='/'
+                  />
+                </div>
               )}
               <FaAngleRight
                 onClick={nextSlide}

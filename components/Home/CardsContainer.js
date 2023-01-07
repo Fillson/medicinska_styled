@@ -30,34 +30,34 @@ const StyledCardsContainer = styled.section`
 const cardsInfo = [
   {
     title: "Styrelsen",
-    text: "Bli medlem i medicinska föreningen - För ett bättre studentliv",
+    text: "Här hittar du information om medlemmarna i styrelsen",
     href: "/",
-    image: "/team-svg.svg",
+    image: "/team.svg",
   },
   {
     title: "Bli Medlem",
     text: "Bli medlem i medicinska föreningen - För ett bättre studentliv",
     href: "/",
-    image: "/join-svg.svg",
+    image: "/join.svg",
   },
   {
     title: "Engagera dig",
-    text: "Bli medlem i medicinska föreningen - För ett bättre studentliv",
+    text: "Gå med i något av utskotten och engagera dig i MFÖ",
     href: "/",
-    image: "/leader-svg.svg",
+    image: "/leader.svg",
   },
   {
     title: "Evenemang",
     text: "Medicinska förening styr upp flera roliga evenmang för dig som student",
     href: "/",
-    image: "/party-svg.svg",
+    image: "/party.svg",
   },
 ];
 
 const CardsContainer = () => {
   return (
     <StyledCardsContainer>
-      <div className='container'>
+      <div className="container">
         {cardsInfo.map((card, index) => {
           return (
             <Card

@@ -114,11 +114,6 @@ const omLinks = [
   { text: "Samarbetspartners", href: "/" },
 ];
 
-const medlemLinks = [
-  { text: "Bli Medlem", href: "/" },
-  { text: "Redan Medlem?", href: "/" },
-];
-
 const kontaktLinks = [
   { text: "Kontakta Oss", href: "/kontakt" },
   { text: "FAQ", href: "/faq" },
@@ -141,19 +136,18 @@ const Header = () => {
   });
   return (
     <StyledHeader>
-      <div className='wrapper'>
-        <Link href='/' className='.logo'>
-          <Image src={LogoImage} height={50} width={50} alt='logga' />
+      <div className="wrapper">
+        <Link href="/" className=".logo">
+          <Image src={LogoImage} height={50} width={50} alt="logga" />
         </Link>
 
         <nav ref={nav}>
-          <Dropdown title='Om MFÖ' links={omLinks} />
-          <Dropdown title='Utskott' links={utskottLinks} />
-          <Dropdown title='Medlem' links={medlemLinks} />
-          <Dropdown title='Kontakt' links={kontaktLinks} />
+          <Dropdown title="Om MFÖ" links={omLinks} />
+          <Dropdown title="Utskott" links={utskottLinks} />
+          <Dropdown title="Kontakt" links={kontaktLinks} />
         </nav>
 
-        <div onClick={toggleMenu} className='menuToggle'>
+        <div onClick={toggleMenu} className="menuToggle">
           <div ref={rotateMinus}></div>
           <div ref={middleLine}></div>
           <div ref={rotatePlus}></div>

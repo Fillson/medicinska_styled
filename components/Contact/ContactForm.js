@@ -27,7 +27,7 @@ const FormStyles = styled.div`
     padding: 0.8rem;
     border: 0;
     border-radius: var(--rounding-slight);
-    background-color: #2b8a3e;
+    background-color: #176e6b;
     color: white;
     cursor: pointer;
   }
@@ -90,8 +90,8 @@ const ContactForm = () => {
       >
         <label>Förnamn</label>
         <input
-          type='text'
-          id='name'
+          type="text"
+          id="name"
           value={inputs.name}
           required
           onChange={handleChange}
@@ -99,8 +99,8 @@ const ContactForm = () => {
 
         <label>Efternamn</label>
         <input
-          type='text'
-          id='surname'
+          type="text"
+          id="surname"
           value={inputs.surname}
           required
           onChange={handleChange}
@@ -108,8 +108,8 @@ const ContactForm = () => {
 
         <label>E-Post</label>
         <input
-          type='text'
-          id='email'
+          type="text"
+          id="email"
           value={inputs.email}
           required
           onChange={handleChange}
@@ -117,7 +117,7 @@ const ContactForm = () => {
 
         <label>Meddelande</label>
         <textarea
-          id='message'
+          id="message"
           value={inputs.message}
           required
           onChange={handleChange}

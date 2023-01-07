@@ -14,7 +14,7 @@ const StyledWelcome = styled.section`
   .content h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #30a730;
+    color: #176e6b;
   }
 
   .contentP {
@@ -26,9 +26,9 @@ const StyledWelcome = styled.section`
 const Welcome = () => {
   return (
     <StyledWelcome>
-      <div className='content'>
+      <div className="content">
         <h2>Bli en del av Örebros bästa studentförening!</h2>
-        <div className='contentP'>
+        <div className="contentP">
           <p>
             Medicinska föreningen Örebro bildades den 7 maj 2012 av
             läkarstudenter vid Örebro Universitet med syfte att främja gemenskap
@@ -44,4 +44,3 @@ const Welcome = () => {
 };
 
 export default Welcome;
-

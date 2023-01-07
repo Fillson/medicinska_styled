@@ -28,7 +28,7 @@ const StyledNews = styled.section`
     text-align: center;
     width: 8rem;
     padding: 0.5rem 0.5rem;
-    background: #30a730;
+    background: #176e6b;
     color: white;
     margin-bottom: 1rem;
     border-radius: var(--slightlyRounded);
@@ -130,9 +130,9 @@ const News = () => {
         <Slider {...settings}>
           {news.map((newsEl, index) => {
             return (
-              <div key={index} className='content'>
+              <div key={index} className="content">
                 <h3>{newsEl.title}</h3>
-                <p className='date'>{newsEl.date}</p>
+                <p className="date">{newsEl.date}</p>
                 <p>{newsEl.text}</p>
                 <Link href={`/news/${newsEl.id}`}>Läs mer</Link>
               </div>

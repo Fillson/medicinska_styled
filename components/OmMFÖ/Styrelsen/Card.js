@@ -11,7 +11,7 @@ const StyledCard = styled.div`
   padding: 1rem;
   border-radius: 0.5rem;
   color: white;
-  background-color: #30a730;
+  background-color: #176e6b;
   align-items: left;
 
   img {
@@ -52,9 +52,9 @@ const Card = ({ name, role, description, mail, image }) => {
     <StyledCard>
       <div>
         <Image
-          className='nextImage'
+          className="nextImage"
           src={image}
-          alt='/'
+          alt="/"
           width={250}
           height={250}
         />

@@ -31,7 +31,7 @@ const StyledCard = styled.div`
     width: 8rem;
     padding: 0.8rem 2rem;
     /* border: 1px solid #2b8a3e; */
-    background-color: #30a730;
+    background-color: #176e6b;
     color: white;
     border-radius: var(--slightlyRounded);
   }
@@ -46,7 +46,7 @@ const StyledCard = styled.div`
     text-align: center;
     padding-top: 8px;
     padding: 4px;
-    color: #30a730;
+    color: #176e6b;
     font-size: 1.5rem;
   }
 
@@ -73,14 +73,14 @@ const Card = ({ title, text, href, image }) => {
   return (
     <StyledCard>
       <Image
-        className='nextImage'
+        className="nextImage"
         src={image}
-        alt='/'
+        alt="/"
         width={250}
         height={250}
       />
       <h3>{title}</h3>
-      <div className='textDiv'>
+      <div className="textDiv">
         <p>{text}</p>
       </div>
       <a href={href}>Läs mer</a>
@@ -89,4 +89,3 @@ const Card = ({ title, text, href, image }) => {
 };
 
 export default Card;
-
